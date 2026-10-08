@@ -43,3 +43,20 @@ UPDATE shops SET name = 'Korzinka Plus', address = 'Sergeli' WHERE id = 1;
 
 SELECT * FROM shops;
 SELECT * FROM products;
+
+DELETE FROM products WHERE id = 9;
+
+SELECT shops.name AS dokon, products.name AS mahsulot, products.price
+FROM shops
+JOIN products ON products.shop_id = shops.id;
+
+INSERT INTO products (id, name, price, shop_id)
+VALUES (10, 'Sichqoncha', 80000, 99);
+
+DELETE FROM shops WHERE id = 3;
+
+DELETE FROM products WHERE shop_id = 3;
+DELETE FROM shops WHERE id = 3;
+
+SELECT * FROM shops;
+SELECT * FROM products;
